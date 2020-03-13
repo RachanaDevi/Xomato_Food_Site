@@ -1,0 +1,59 @@
+<% include ./partials/header %>
+<h1>Enter Customer Details</h1>
+
+<div class='container'>
+    <div class='thumbnail'>
+<form method='POST' action="/customer/register">
+    <div>
+    First Name
+    <input class='form-control' type="text" name="username">
+    </div>
+    
+    <div>
+    Last Name
+    <input class='form-control' type="text" name="customer[lname]">
+    </div>
+    
+    <div>
+    Address
+    <input class='form-control'type="text" name="customer[address]">
+    </div>
+    
+    <div>
+    Street
+    <input class='form-control'type="text" name="customer[street]">
+    </div>
+    
+    <div>
+    City
+    <input class='form-control'type="text" name="customer[city]">
+    </div>
+    
+    <div>
+    State
+    <input class='form-control'type="text" name="customer[state]">
+    </div>
+    
+    
+    <div>
+    Phone Number
+    <input class='form-control' type="text" name="customer[phone]">
+    </div>
+    
+    <div>
+    Email
+    <input class='form-control' type="email" name="customer[email]">
+    </div>
+    
+    <div>
+    Password
+    <input  class='form-control' type="password" name="password">
+    </div>
+    
+    <br>
+    <input class='btn btn-success' type='submit' value='Submit'>
+</form>
+</div>
+</div>
+
+<% include ./partials/footer %>

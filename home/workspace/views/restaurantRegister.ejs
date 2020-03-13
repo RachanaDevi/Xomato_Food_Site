@@ -1,0 +1,69 @@
+<% include ./partials/header %>
+<h1>Enter Restaurant Details</h1>
+
+<div class='container'> 
+<div class='thumbnail'>
+<form method='POST' action="/restaurant/register">
+    <div>
+     Name
+    <input class='form-control' type="text" name="username">
+    </div>
+
+    
+    <div>
+    Address
+    <input class='form-control' type="text" name="restaurant[address]">
+    </div>
+    
+    
+  
+    
+    <div>
+    City
+    <input class='form-control' type="text" name="restaurant[city]">
+    </div>
+    
+    <div>
+    State
+    <input class='form-control' type="text" name="restaurant[state]">
+    </div>
+    
+    
+    <div>
+    Phone Number
+    <input class='form-control' type="text" name="restaurant[phone]">
+    </div>
+    
+    <div>
+    Email
+    <input class='form-control' type="email" name="restaurant[email]">
+    </div>
+    
+    <div>
+    Cuisine
+    <input class='form-control' type="text" name="restaurant[cuisine]">
+    </div>
+    
+    
+    <div>
+    Restaurant Type
+    <input class='form-control' type="text" name="restaurant[cuisine]">
+    </div>
+    
+    
+    <div>
+    Image url
+    <input class='form-control' type="text" name="restaurant[image]">
+    </div>
+    <div>
+    Password
+    <input class='form-control' type="password" name="password">
+    </div>
+    
+    <input class='btn btn-success' type='submit' value='Submit'>
+</form>
+</div>
+</div>
+
+
+<!--< % include ./partials/footer %>-->

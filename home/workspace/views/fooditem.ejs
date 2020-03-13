@@ -1,0 +1,44 @@
+<%include ./partials/header %>
+<h1>Enter Food Items Details for Restaurants</h1>
+
+<div class='container'>
+    <div class='thumbnail'>
+<form method='POST' action="/fooditems/new">
+    <div>
+     Name
+    <input  class='form-control' type="text" name="food[name]">
+    </div> 
+ 
+    
+    <div>
+    Cuisine
+    <input  class='form-control' type="text" name="food[cuisine]">
+    </div>
+    
+    <div>
+    Course
+    <input  class='form-control' type='text' name='food[course]'
+    </div>
+    
+    
+    <div>
+        Price
+        <input  class='form-control' type='text' name='food[price]'>
+    </div>
+    
+    <!--Order COunt is what-->
+    
+    <div>
+    Image url
+    <input class='form-control'  type="text" name="food[image]">
+    </div>
+    
+    <div>
+    Description
+    <input class='form-control' type='text' name='food[description]'>
+    </div>
+    <br>
+    <input type='submit' class='btn btn-success' value='Submit'>
+</form>
+</div>
+</div>

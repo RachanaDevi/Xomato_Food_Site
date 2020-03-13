@@ -1,0 +1,12 @@
+{
+  "name": "zomato-site",
+  "id": "6480979",
+  "description": "",
+  "gitUrl": "",
+  "workspaceType": "nodejs",
+  "dockerBaseImage": "cloud9/ws-nodejs:2017-08-31T12-15-07Z",
+  "owner": {
+    "name": "rachanadevi18",
+    "id": "2226080"
+  }
+}

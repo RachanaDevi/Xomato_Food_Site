@@ -1,0 +1,85 @@
+<html>
+    <head> <title>Zomato App</title></head>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    
+   	
+<body>
+    
+    
+<!--    <nav class="navbar navbar-default navbar-fixed-top">-->
+<!--<div class="container">	-->
+<!--	<div class="navbar-header">-->
+
+<!--		<button type="button" class="navbar-toggle collapsed" data-target="#navbarHead" data-toggle="collapse" aria-expanded=false>-->
+<!--	    <span class="sr-only"></span>-->
+<!--	    <span class="icon-bar"></span>-->
+<!--	    <span class="icon-bar"></span>-->
+<!--	    <span class="icon-bar"></span>-->
+
+<!-- C:\Users\Rachu\Desktop\Study Material\College\SEMESTER 5\IT\Lab_Assignment\Assignment1 -->
+<!--		</button>	-->
+<!--		<a class="navbar-brand" href="\">Zomato App</a>-->
+<!--	</div>-->
+
+
+<!--        <div class="collapse navbar-collapse" id="navbarHead">-->
+<!--	     	<ul class="nav navbar-nav">-->
+<!--	     		    <li class="active"><a href="\">Home</a></li>-->
+<!--	     			<li><a href="#">About</a></li>-->
+<!--					<li><a href="#">Contact</a></li>-->
+<!--			</ul>-->
+				
+<!--			<ul class="nav navbar-nav navbar-right">-->
+<!--				    <li><a href="/customer/register"><i class="fa fa-user-plus"></i> Customer Signup</a></li>	-->
+<!--                    <li><a href="/restaurant/register"><i class="fa fa-user-plus"></i> Restaurant Signup</a></li>	-->
+<!--				    <li><a href="/customer/login"><i class="fa fa-user"></i> Customer Login</a></li>-->
+<!--				    <li><a href="/restaurant/login"><i class="fa fa-user"></i> Restaurant Login</a></li>	-->
+<!--			</ul>-->
+<!--        </div>-->
+
+
+<!--</div>-->
+<!--</nav>-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            Zomato App
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <link rel="stylesheet"  href="/stylesheets/main.css">
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	 <!--<link rel="stylesheet" type="text/css" href="\Users\Rachu\Desktop\Study Material\College\SEMESTER 5\IT\Lab_Assignment\Assignment1\CSS_Files\first.css">-->
+	 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Zomato App</a>
+        </div>
+        
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav navbar-right nav">
+              <%  if(!currentUser){  %>
+                <li><a href="/customer/login">Login as Customer</a></li>
+                <li><a href="customer/register">Signup as Customer</a></li>
+                <li><a href="/restaurant/login">Login as Restaurant</a></li>
+                <li><a href="/restaurant/register">Signup as Restaurant</a></li>
+                
+              <%    } else { %>
+                 <li><a href="#">Signed In As <%= currentUser.username %> </a></li>
+                <li><a href="/logout">Logout</a></li>
+              <% } %>    
+                
+            </ul> 
+        </div>
+    </div>
+    
+</nav>

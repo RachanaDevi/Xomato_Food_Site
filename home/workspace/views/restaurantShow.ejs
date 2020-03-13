@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+
+
+<br>
+<br>
+<br>
+
+<% restaurant.foodItems.forEach(function(foodItem){ %>
+    
+  <h1>INSIDE RESTAURANT SHOW</h1>
+  <!--<form action='/addfooditem/< %= foodItem._id %>' method='POST'>-->
+<div class='thumbnail'>
+    
+    <div class='caption'>
+        Name:<h3><%=foodItem.name %></h3><br>
+        Price:<h3><%=foodItem.price %></h3><br>
+        
+    </div>
+    
+    <!--Quantity <input type='text' name='food[quantity]'>-->
+    <!--<input type='submit' value='Order' class='btn btn-default'>-->
+    <a href='/add-to-cart/<%= foodItem._id %>' class='btn btn-success' role='button'> Add to cart </a>
+    
+</div> 
+</form>
+<% }) %>
+ 
+<!--< % include ./partials/footer %>-->

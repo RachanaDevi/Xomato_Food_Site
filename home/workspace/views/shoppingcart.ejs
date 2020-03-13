@@ -1,0 +1,85 @@
+<% include ./partials/header %>
+
+
+<% if(foodItems){%>
+<div class="row">
+
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+
+            <ul class="list-group">
+
+ <!--for loop for all the products-->
+                <!--{ { # each products }} -->
+                <%foodItems.forEach(function(foodItem){ %>
+
+             <div class='thumbnail'>
+                    <!--<li class="list-group-item">-->
+
+
+                        <span class="badge"><%= foodItem.qty %></span>
+
+                        <strong><h1><%= foodItem.item.name %> </h1></strong>
+
+                        <span class="label label-success">Rs.<%= foodItem.price %></span>
+
+                        <div class="btn-group">
+
+                            <!--<button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Remove /Reduce <span class="caret"></span></button>-->
+
+                            <!--<ul class="dropdown-menu">-->
+
+                                <li><a href="/reduce/<%=foodItem.item._id %>">Remover 1 foodItem</a></li>
+
+                                <li><a href="/remove/<%=foodItem.item._id %>">Remove the foodItem</a></li>
+
+                            <!--</ul>-->
+
+                        </div>
+
+                    <!--</li>-->
+                </div>    
+
+                <% }) %>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+
+            <strong>Total: <%= totalPrice %></strong>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+
+            <a href="/checkout" type="button" class="btn btn-success">Checkout</a>
+
+        </div>
+
+    </div>
+<% } else {%>
+
+
+    <div class="row">
+
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+
+            <h2>You don't have any items in cart</h2>
+
+        </div>
+
+    </div>
+
+<% } %>
+<!--< % include ./partials/footer %>-->

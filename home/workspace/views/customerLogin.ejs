@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class='thumbnail'>
+    <form method='POST' action='/customer/login'>
+        <div>
+            Username
+            <input class='form-control' type='text' name='username'>
+        </div>
+        
+        <div>
+            Password
+            <input  class='form-control' type='password' name='password'>
+        </div>
+        
+        <input class='btn btn-primary' type='submit' value='Login'>
+    </form>
+    </div>
+</div>
+<% include ./partials/footer %>

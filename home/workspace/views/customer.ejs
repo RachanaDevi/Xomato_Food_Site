@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+<!--<h1>In customer ejs</h1>-->
+<!--show all the restaurants-->
+
+<div class='container'>
+    <div class= 'col-lg-4'>
+        <% restaurants.forEach(function(rest){ %>
+            <!--<h1>ALl RESTAURANTS   </h1>-->
+            <div class='thumbnail'>
+                <h3> <%= rest.username %></h3>
+                <div class='caption'> <%= rest.city %></div>
+                <a href="/restaurant/<%= rest._id %>" class="btn btn-default" role="button">Check Out</a>
+            </div>
+        <% }) %>
+            
+            
+        </div> 
+    </div>
+</div>
+<!--click on the restaurants and click on the food items-->
+<!--add the food items.. ie it will push it-->
+
+
+
+<% include ./partials/footer %>
